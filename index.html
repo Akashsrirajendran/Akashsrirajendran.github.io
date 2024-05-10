@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Akash Rajendran Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+</head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Akash Rajendran</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certification</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Akash Rajendran</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'Graduate Student  ',
+						'Strategic Data Analyst  ',
+						'Data Enthusiast   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Business Analyst Graduate</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/akash-rajendran-55a5b5252/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+							<a href="https://public.tableau.com/app/profile/akash.rajendran4909/vizzes" class="btn btn-white btn-outline-white py-3 px-4">Tableau</a>  
+							<a href="https://github.com/akash-rajendran" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Akash Rajendran</span></p>
+										<p><span class="title-s">Interested Role: </span> <span>Business Analyst/Data Analyst/Business Intelligence Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years</span></p>
+										<p><span class="title-s">Address: </span> <span>Coventry, United Kingdom</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Risk Management</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<li>With a Master's in Business Analytics from Warwick and a Bachelor's in Engineering from Velammal College, I possess a strong background in data management and strategic analysis. At WIPRO India Limited, I led data modeling projects, integrating vast datasets with Python, SQL, and Alteryx.</li>
+								<li>These experiences have honed my ability to optimize performance and deliver impactful solutions in business analytics. Outside of data, I'm an avid learner and enjoy exploring new technologies and methodologies to stay ahead in the rapidly evolving field of data science.</li>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Business Analytics, Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Banking,Consultancy,Finance IT &amp; Healthcare</span></li>
+									<li class="d-flex"><span>Education:</span> <span>MS Business Analytics &amp; BE Mechancial Engineering</span></li>
+									<li class="d-flex"><span>Software Knowledge:</span> <span>Tableau, Minitab, Alteryx, Simul8, Orange, SAP Software, S4HANA, ARIBA &amp; CAD</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Google Analytics, Excel &amp; Tableau</span></li>
+									<li class="d-flex"><span>Programming:</span> <span>Python, R &amp; SQL</span></li>
+									<li class="d-flex"><span>Certifications:</span> <span>Google Analytics, Alteryx Designer Core, Excel to Power BI, Business Analysis and Process Management, Data Analytics Essential-Cisco</span></li>
+									
+								</ul>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Accomplished Data Management Professional adept at harnessing the power of data to optimize business processes with a proven track record in leveraging data-driven insights to steer business strategies. Specializing in Data Visualization, Automation, statistical analysis, and Prediction Modeling, I excel in unlocking valuable insights to propel organizational success.</p>
+          </div>
+		  <div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p>
+				<a href="Akash Rajendran.pdf" class="btn btn-primary py-3 px-4" target="_blank">Check My Resume <i class="fa fa-download"></i></a></p>
+        </div>
+	</div>
+</div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">July 2021 - October 2022</span>
+						<h2>Analyst</h2>
+						<span class="position">WIPRO</span>
+						<p class="mt-4">Wipro Limited is a leading technology services and consulting company focused on building innovative solutions that address clients’ most complex digital transformation needs. 
+							<ul>
+								<li>Spearheaded data modeling and validation of 10M+ records, executing ETL using Python, SQL, and Alteryx to integrate terabytes of datasets, ensuring 99% data quality and integrity, streamlining migration processes by 40%</li>
+								<li>Enhanced a SQL server database with 60,000+ customer records for healthcare clients in EMEA, NA and LATAM regions, enacting SQL queries (Stored Procedures, Joins, Indexing, Views) accomplishing an impressive 12% increase in revenue</li>
+								<li>Architected a Minitab-based Time Series Forecasting ARIMA model to predict monthly ticket closure rates, resulting in 45% substantial improvements in operational efficiency</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">October 2020 – July 2021</span>
+						<h2>Associate Consultant</h2>
+						<span class="position">WIPRO</span>
+						<p class="mt-4">Wipro Limited is a leading technology services and consulting company focused on building innovative solutions that address clients’ most complex digital transformation needs. 
+							<ul>
+								<li>Architected SAP solutions for enterprise resource planning, resulting in a 25% reduction in system downtime and a 20% increase in system performance</li>
+								<li>Managed 20+ client relationships; interfaced with delivery teams, ensured on time delivery of project assignment, leading to retention rates of 95% and 25% increase in client accounts</li>
+								<li>Implemented SAP HANA and ARIBA cloud tools to streamline business operations and enhance efficiency by 30% through advanced analytics and real-time insights</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">May 2019 - June 2019</span>
+                            <h2>Project Management Intern</h2>
+                            <span class="position">DAEJOO AUTOMOTIVE INDIA PRIVATE LIMITED</span>
+                            <p class="mt-4">Leading Manufacturer of parts and accessories for motor vehicles and their engines [brakes, gear boxes, axles, road wheels, suspension shock absorbers, radiators, silencers, exhaust pipes, steering wheels, steering columns and steering boxes and other parts and accessories 
+                                <ul>
+                                    <li>Collaboratively analyzed and created financial reports to identify cost reduction strategies, examined KPIs using Power BI leveraging DAX, Power Query, validated functional requirements with cross-functional teams to minimize risk, optimized cost reduction by 30%</li>
+                                    <li>Integrated 10K records from multiple sources using Excel VLOOKUP and leveraged Pivot Tables for sales trend analysis.</li>
+                                </ul>
+                            </p>
+
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">June 2018 - August 2018</span>
+                                <h2>Software Development Intern</h2>
+                                <span class="position">RAIL NET SOFTWARE SOLUTION</span>
+                                <p class="mt-4">Railnet Software Solutions is responsible for providing solutions and services related to software such as building a cyber security network, web development in the souther railway sector in india. 
+                                    <ul>
+                                        <li>Performed functional frameworks and contributed to various stages of software development life cycle and trained Machine Learning models with a 90% accuracy rate</li>
+                                        <li>Acquired hands-on experience in software languages such as Python and C++ and gained insights into modern development methodologies like Agile or Scrum</li>
+                                    </ul>
+                                </p>
+
+				</div>
+
+			</div>
+		</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">September 2022 - April 2024</span>
+    					<h2>MSc Business Analytics</h2>
+    					<span class="position">Warwick Business School</span>
+    					<p class="mt-4">Relevant Modules Include: Business Statistics (66%), Data Management (61%), Discrete Event Simulation (69%)</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">August 2016 - June 2020</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Velammal College of Engineering and Technology</span>
+    					<p class="mt-4">Relevant Modules Include: Principles of Management (A), Engineering Economics (A), Dynamics of Machines (A)</p>
+						<p class="mt-4">Grade : First Class with 76.8%</p>
+    				</div>
+				</div>
+    		</div>
+
+    		
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Data Analytics projects developed using R, SQL, Python, Alteryx, Simul8, ML &amp; Tableau.</p>
+          </div>
+        </div>
+		<div class="container">
+			<div class="row justify-content-Left mb-10 pb-10">
+				<div class="col-md-7 heading-section text-Left ftco-animate">
+					<h2 class="mb-4">Tableau </h2>
+					<p>Steps: Data Extracting, Data cleaning and preprocessing, and EDA (exploratory Data analysis) & building Tableau Dashboard.</p>
+					<p>Skills: Calculated fields, LOD operations</p>
+				</div>
+			</div>
+		<div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://public.tableau.com/app/profile/akash.rajendran4909/viz/NYCRatSightings_17153590124170/NYCRats" class="block-20 zoom-effect" style="background-image: url('images/Rats\ in\ NYC.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://public.tableau.com/app/profile/akash.rajendran4909/viz/NYCRatSightings_17153590124170/NYCRats">Rat Sightings in NYC - Tableau </a></h3>
+				  <p>Explore the rat landscape of NYC with interactive visuals: discover boroughs with the highest sightings, pinpoint hotspots on a map, track trends over time, uncover preferred habitats, and identify problematic zip codes.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://public.tableau.com/app/profile/akash.rajendran4909/viz/PoliceDashboard_17153599646210/PoliceDashboard" class="block-20 zoom-effect" style="background-image: url('images/Crimes\ in\ UK.png');">
+				</a>
+				<div class="text mt-3 float-right d-block"> 
+				  <h3 class="heading"><a href="https://public.tableau.com/app/profile/akash.rajendran4909/viz/PoliceDashboard_17153599646210/PoliceDashboard">Crimes in UK - Tableau </a></h3>
+				  <p>Explore the prevalence of crimes in the UK through dynamic visualizations, including bar charts highlighting the most prevalent offenses, interactive maps showcasing crime distribution across police force areas, and line charts illustrating overall UK crime rates, with the option to exclude London for focused analysis.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-Left mb-10 pb-10">
+				<div class="col-md-7 heading-section text-Left ftco-animate">
+					<h2 class="mb-4">Python, R &amp; SQL </h2>
+					<p>Skills: Data cleaning, Data analysis, Data visualization,Prediction Analysis, Database Normalization, Data transformations, SQL Queries </p>
+					<p>Technology: Python,Pandas,Matplotlib,R Studio, SQL Queries</p>
+				</div>
+			</div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/akash-rajendran/Book-Publisher-sales" class="block-20 zoom-effect" style="background-image: url('images/book.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/akash-rajendran/Book-Publisher-sales">Book Publisher sales - R</a></h3>
+                <p>The purpose of this report is to provide the managers of the publishing company with an understanding of the trend in e-book sales. The report utilizes data from 6000 e-books, which includes 7 different variables that detail e-book sales over a period of many months.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/akash-rajendran/Food-Hygiene-Data" class="block-20 zoom-effect" style="background-image: url('images/Food\ Hygiene.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/akash-rajendran/Food-Hygiene-Data">Food Hygiene Data Analysis - R </a></h3>
+			  <p>Performed comprehensive analysis of food hygiene data from multiple UK local authorities, examining 347 establishments across various impact levels (A-E). Identified a significant correlation between intervention effectiveness and factors such as FTE food safety employees.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/akash-rajendran/Target-email-marketing" class="block-20 zoom-effect" style="background-image: url('images/Target\ Email.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+			  <h3 class="heading"><a href="https://github.com/akash-rajendran/Target-email-marketing">Target Email Marketing - R</a></h3>
+			  <p>Proposed a process model of CRISP-DM to analyse the email marketing data and to investigate the most important factors that determine the customers to have a positive reaction to an e-mail marketing campaign for prediction of visiting the shop, which is expected to increase the effectiveness of the marketing strategy.</p>
+			</div>
+		  </div>
+		</div>
+        </div>
+		<div class="row d-flex">  
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/akash-rajendran/Production-and-Inventory-Management-Linear-Programming-Approach" class="block-20 zoom-effect" style="background-image: url('images/Inventory.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/akash-rajendran/Production-and-Inventory-Management-Linear-Programming-Approach">Production &amp; Inventory Management Linear Programming Approach - Python</a></h3>
+			  <p>Developed LP model optimizing production & inventory. Key insights: minimal cost solutions, actionable recommendations for production & inventory control. Demonstrated analytical & problem-solving skills.</p>
+			</div>
+		  </div>
+		</div>
+        <div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+			  <a href="https://github.com/akash-rajendran/Optimizing-Customer-Allocation-Heuristic-Approach" class="block-20 zoom-effect" style="background-image: url('images/Customer\ Allocation.png');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+				<h3 class="heading"><a href="https://github.com/akash-rajendran/Optimizing-Customer-Allocation-Heuristic-Approach">Customer Allocation Heuristic Approach - Python</a></h3>
+				<p>Detailed examination of customer allocation strategies for an installation company in Great Britain. Drawing on heuristic algorithms investigated by Haket, Rhee, and Swart (2020), the project aims to minimize travel time, costs, and carbon emissions associated with technician visits to customers. </p>
+			  </div>
+			</div>
+		  </div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/akash-rajendran/E-commerce-Data-Analysis-and-Visualization-Project" class="block-20 zoom-effect" style="background-image: url('images/Ecommerce.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/akash-rajendran/E-commerce-Data-Analysis-and-Visualization-Project">E-Commerce Data Analysis with Olist Datasets - SQL </a></h3>
+				  <p>This project focuses on analyzing and visualizing e-commerce data from Olist, a Brazilian company. Covering customer behavior, product categories, sales, and marketing funnel, it aims to extract insights for informed business decisions</p>
+				</div>
+			  </div>
+			</div>
+	 </div>
+	</div>
+	<div class="container">
+		<div class="row justify-content-Left mb-10 pb-10">
+			<div class="col-md-7 heading-section text-Left ftco-animate">
+				<h2 class="mb-4">Forecasting using ML </h2>
+				<p>Steps: Preliminary Analysis, Model Identification, Model Estimation, Check Model Adequacy, Forecast</p>
+				<p>Skills: ML, Minitab</p>
+			</div>
+		</div>
+		<div class="row d-flex">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/akash-rajendran/Sales-Forecasting" class="block-20 zoom-effect" style="background-image: url('images/Forecasting.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/akash-rajendran/Sales-Forecasting">Sales Forecast - Time Series Forecasting - ML</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-Left mb-10 pb-10">
+				<div class="col-md-7 heading-section text-Left ftco-animate">
+					<h2 class="mb-4">Simul8 </h2>
+					<p>Steps: Conceptual modelling,Input data, Verification and Validation, Output analysis, Experimentation, Simulation and Analytics. </p>
+					<p>Skills: Model-driven simulation, Data driven analytics, Digital Twin</p>
+				</div>
+			</div>
+		 <div class="row d-flex"> 
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/akash-rajendran/Hospital-Emergency-Room-Analysis" class="block-20 zoom-effect" style="background-image: url('images/Emergency\ Room.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/akash-rajendran/Hospital-Emergency-Room-Analysis">Hospital Emergency room Analysis - Simul8</a></h3>
+				  <p>This project aims to analyze the operations of a hospital emergency room (ER) to assess performance metrics and potential improvements by using Simul8. It explores the impact of transitioning to a dedicated doctor system and varying nurse staffing levels on patient and staff metrics.</p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row justify-content-Left mb-5 pb-5">
+			<div class="col-md-7 heading-section text-Left ftco-animate">
+				<h2 class="mb-4">Alteryx </h2>
+				<p>Skills: Data Preparation and Cleansing, Data Driven Decision Making, Formula and Function Building, Workflow Design and Optimization, Output and Reporting, Real-time Data Analysis.</p>
+			</div>
+		</div>
+		 <div class="row d-flex">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/akash-rajendran/Sales-Summarization-Alteryx" class="block-20 zoom-effect" style="background-image: url('images/Sales\ Summarization.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/akash-rajendran/Sales-Summarization-Alteryx">Sales Summarization- Alteryx</a></h3>
+				  <p>This guided project involved the creation of an Alteryx workflow to analyze sales data from a superstore. The primary task was to update the existing sales orders table to include orders spanning from 2016 to 2019, focusing on separate sub-category items and their corresponding sales data.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+	</div>
+    </section>
+
+	<section class="ftco-section" id="certification-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Certification</h1>
+			  <h2 class="mb-4">Certification</h2>
+			  <p>Below are my professional certifications, showcasing my expertise and commitment to continuous learning and professional development.</p>
+			</div>
+		  </div>
+		</div>
+		  <div class="container">
+		  <div class="row d-flex">
+			  <div class="col-md-3 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="Warwick Award.jpg" class="block-20 zoom-effect" style="background-image: url('images/warwick_award_icon.png');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="Warwick Award.jpg">Warwick Award </a></h3>
+					<p>Recipient of the Warwick Award for skill development activity from University of Warwick</p>
+				  </div>
+				</div>
+			  </div>
+				<div class="col-md-3 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://skillshop.credential.net/2567df50-ff46-46bd-863c-f99f987bda7c" class="block-20 zoom-effect" style="background-image: url('images/Google\ Badge.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+					  <h3 class="heading"><a href="https://skillshop.credential.net/2567df50-ff46-46bd-863c-f99f987bda7c">Google Analytics Certification </a></h3>
+					  <p>This certification validates expertise in leveraging Google Analytics tools to track, analyze, and interpret website traffic, enabling informed decision-making and driving measurable business results.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://www.credly.com/badges/41fa8094-416b-4d75-ab9d-04e9fdc0e952/linked_in_profile" class="block-20 zoom-effect" style="background-image: url('images/data-analytics-essentials.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+					  <h3 class="heading"><a href="https://www.credly.com/badges/41fa8094-416b-4d75-ab9d-04e9fdc0e952/linked_in_profile">Data Analytics Essentials-Cisco </a></h3>
+					  <p>Recipient of the Data Analytics Essentials certification from Cisco, validating proficiency in fundamental data analytics concepts and commitment to leveraging data effectively, empowering informed decision-making and driving strategic initiatives in the digital landscape.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://www.credly.com/badges/d0f5fb80-7445-44fb-87da-759a4e170c4c/linked_in_profile" class="block-20 zoom-effect" style="background-image: url('images/alteryx-designer-core-certification.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+					  <h3 class="heading"><a href="https://www.credly.com/badges/d0f5fb80-7445-44fb-87da-759a4e170c4c/linked_in_profile">Alteryx Designer Core Certification </a></h3>
+					  <p>Recipient of the Alteryx Designer Core Certification, demonstrating proficiency in expertise in leveraging Alteryx tools to streamline workflows, optimize data processes, and drive informed decision-making with efficiency and accuracy.</p>
+					</div>
+				  </div>
+				</div>
+			</div>
+		  </div>
+	  </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Coventry, United Kingdom</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+44 7436192583</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">akashsrimdu@gmail.com</a></p>
+	          </div>
+          </div>
+
+   		</div>
+ </section>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
